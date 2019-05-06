@@ -40,7 +40,7 @@ def main(argv):
                 msg = "ffmpeg -i {0}/{1} -an -r 2 -y {2}/{3}-%d.jpg".format(root, f, output_file, ''.join(f.split('.')[:-1]))
                 print(msg)
                 os.system(msg)
-
+                # ffmpeg -i input.mp4 -qscale:v 2 output_%03d.jpg
                 
             
 if __name__ == "__main__":
