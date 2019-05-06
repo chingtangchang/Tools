@@ -37,7 +37,7 @@ def main(argv):
             if fullpath.split('.')[-1] in video_format:
                 #os.system('2to3 -w %s'%fullpath)
                 # -r img/s 
-                msg = "ffmpeg -i {0}/{1} -an -r 2 -y {2}/{3}-%d.jpg".format(root, f, output_file, ''.join(f.split('.')[:-1]))
+                msg = "ffmpeg -i {0}/{1} -qscale:v 2 -an -r 2 -y {2}/{3}-%d.jpg".format(root, f, output_file, ''.join(f.split('.')[:-1]))
                 print(msg)
                 os.system(msg)
                 # ffmpeg -i input.mp4 -qscale:v 2 output_%03d.jpg
